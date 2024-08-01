@@ -1,4 +1,4 @@
-﻿using System.Globalization;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.Linq.Expressions;
@@ -120,9 +120,8 @@ class Program
                     Console.WriteLine("");
                     break;
                 case "9":
-
                     List<string> lista1 = new List<string>(); // Vazia
-                    List<string> lista2 = new List<string> { "Marcos", "Azevedo", "Moura", "Augusto" }; // Estanciando com valor
+                	List<string> lista2 = new List<string> { "Marcos", "Azevedo", "Moura", "Augusto" }; // Estanciando com valor
                     lista2.Add("Carlos");// Adiciona no final
 
                     foreach (string obj in lista2)
