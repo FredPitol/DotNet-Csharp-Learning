@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.Linq.Expressions;
 using System.ComponentModel;
+using System.Security.AccessControl;
+using System.Runtime.CompilerServices;
 
 namespace ModuloCinco;
 
@@ -24,6 +26,7 @@ class Program
             Console.WriteLine("7 - Modificador de parâmetros - Ref e Out");
             Console.WriteLine("8 - foreach");
             Console.WriteLine("9 - Listas");
+            Console.WriteLine("10 - Listas - Exercicio de fixacao");
             Console.WriteLine("0 - Sair");
             Console.WriteLine("");
             string choice = Console.ReadLine();
@@ -152,7 +155,7 @@ class Program
                     Console.WriteLine($"Primeiro nome com a letra A no inicio: {ultimoLista} " +
                         $"\nNa posição {ultimaPosicao}\n");
 
-                    Console.WriteLine("---------- FindAll - Encontro todos que tenham 5 letras -----------");
+                    Console.WriteLine("---------- FindAll - Encontra todos os nomes que tenham 5 letras -----------");
                     List<string> listaApoio = lista2.FindAll(x => x.Length == 5);  // Uma nova lista recebe os valores
                     foreach (string obj in listaApoio)
                     {
@@ -167,7 +170,6 @@ class Program
                     }
 
                     Console.WriteLine("---------- RemoveAt - Remove na ultima posição -----------");
-
                     lista2.RemoveAt(lista2.Count - 1); //Uso do count
                     foreach (string obj in lista2)
                     {
@@ -176,12 +178,12 @@ class Program
 
 
                     Console.WriteLine("---------- RemoveAll - Todos com M -----------");
-
                     lista2.RemoveAll(x => x[0] == 'M');
                     foreach (string obj in lista2)
                     {
                         Console.WriteLine($"{obj}");
                     }
+
                     Console.WriteLine("---------- Remove - Lucas -----------");
                     lista2.Remove("Lucas");
                     foreach (string obj in lista2)
@@ -190,7 +192,54 @@ class Program
                     }
 
                     Console.WriteLine($"");
+                    break;
+                case "10":
+                    Console.WriteLine("Digite a quantidade de funcionários a serem cadastrados: ");
 
+                    int qtdFun = int.Parse(Console.ReadLine());
+                    List<Funcionario> listaFun = new List<Funcionario>();
+                    for (int i = 0; i < qtdFun; i++)
+                    {
+                        Console.WriteLine($"Funcionário {i + 1}");
+
+                        Console.Write("Digite o id do funcionario: ");
+                        string id = Console.ReadLine();
+
+                        Console.Write("Digite o nome do funcionario : ");
+                        string nome = Console.ReadLine();
+
+                        Console.Write("Digite o salario do funcionario : ");
+                        double sal = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+                        listaFun.Add(new Funcionario(id, nome, sal));
+                    }
+
+                    foreach (Funcionario obj in listaFun)
+                    {
+                        Console.WriteLine($"");
+                        Console.WriteLine($"Nome:{obj.Nome}");
+                        Console.WriteLine($"Id:{obj.Id}");
+                        Console.WriteLine($"Salario: {obj.Salario}");
+                        Console.WriteLine($"");
+                    }
+
+                    Console.WriteLine("Digite o id do funcionário que terá um acréscimo no salário: ");
+                    string escolha = Console.ReadLine();
+                    Console.WriteLine("");
+
+                    Console.WriteLine("Digite a porcentagem de acréscimo");
+                    double pctg = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    Console.WriteLine("");
+
+                    int funcPosicao = listaFun.FindIndex(x => x.Id == escolha);
+                    listaFun[funcPosicao].AumentarSalario(pctg);
+                    Console.WriteLine("");
+
+                    Console.WriteLine($"Lista atualizada");
+                    foreach (Funcionario obj in listaFun)
+                    {
+                        Console.WriteLine($"Nome:{obj.Nome} Id:{obj.Id} Salario:{obj.Salario}");
+                    }
                     break;
                 case "":
                     Console.WriteLine("");
