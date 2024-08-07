@@ -1,0 +1,48 @@
+[33mcommit 849c312987c67066b3346a72e5f605be5ce4400a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Fred Pitol <freirefrederico1@gmail.com>
+Date:   Mon Aug 5 12:47:05 2024 -0300
+
+    Finalizando arrays
+
+[33mcommit aa6dfb716f9246e4b952aed4b8c74b780644bb60[m
+Author: Fred Pitol <freirefrederico1@gmail.com>
+Date:   Fri Aug 2 15:27:43 2024 -0300
+
+    Two Dimensional array
+
+[33mcommit be5baa457439938eea03e5c7052d06bb20105e68[m
+Merge: fa8dbc7 8cbd8d2
+Author: Fred Pitol <freirefrederico1@gmail.com>
+Date:   Fri Aug 2 14:57:53 2024 -0300
+
+    Merge branch 'master' of https://github.com/FredPitol/DotNet-Csharp-Learning
+
+[33mcommit fa8dbc7a64adb860a0d302da801687ece91d2b21[m
+Author: Fred Pitol <freirefrederico1@gmail.com>
+Date:   Fri Aug 2 14:57:42 2024 -0300
+
+    Listas
+
+[33mcommit 8cbd8d26ec4b4db82ee3a5b1da7b833b50bf040c[m
+Author: Fred Pitol <61964787+FredPitol@users.noreply.github.com>
+Date:   Thu Aug 1 19:09:14 2024 -0300
+
+    Teste edição via tablet
+
+[33mcommit a0154b15216d5ff2b9c96d00aa12619e9e7301d1[m
+Author: Fred Pitol <freirefrederico1@gmail.com>
+Date:   Thu Aug 1 17:04:47 2024 -0300
+
+    Listas, tipos de variáveis, loop
+
+[33mcommit 6acfa3482859b0c97fdfdb61a40903eeee8837de[m
+Author: Fred Pitol <freirefrederico1@gmail.com>
+Date:   Thu Aug 1 12:13:09 2024 -0300
+
+    Add project files.
+
+[33mcommit be861ae960a1320349b549522e089927ba1ad64c[m
+Author: Fred Pitol <freirefrederico1@gmail.com>
+Date:   Thu Aug 1 12:13:06 2024 -0300
+
+    Add .gitattributes and .gitignore.
